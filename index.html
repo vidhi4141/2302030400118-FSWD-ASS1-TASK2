@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>College Event Landing Page</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed top-0 left-0 w-full z-10">
+    <nav class="container mx-auto flex justify-between items-center py-4 px-4">
+      <h1 class="text-2xl font-bold">College Event</h1>
+      <div class="space-x-6 hidden md:block">
+        <a href="#home" class="hover:text-blue-600">Home</a>
+        <a href="#about" class="hover:text-blue-600">About</a>
+        <a href="#highlights" class="hover:text-blue-600">Highlights</a>
+        <a href="#schedule" class="hover:text-blue-600">Schedule</a>
+        <a href="#contact" class="hover:text-blue-600">Contact</a>
+        <a href="#register" class="bg-blue-600 text-white px-4 py-2 rounded">Register</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- Hero Section -->
+    <section id="home" class="text-center py-20 bg-blue-100">
+      <h2 class="text-4xl font-bold mb-4">Welcome to Our College Tech Event</h2>
+      <p class="text-lg mb-6">Join us for an exciting day of learning, networking, and innovation.</p>
+      <a href="#register" class="bg-blue-600 text-white px-6 py-3 rounded font-semibold">Register Now</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-16 px-4">
+      <h3 class="text-3xl font-bold mb-6 text-center">About the Event</h3>
+      <p class="text-center max-w-2xl mx-auto">
+        This event brings together tech enthusiasts, students, and professionals to explore new trends and
+        participate in workshops and competitions.
+      </p>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="bg-gray-100 py-16">
+      <div class="container mx-auto px-4">
+        <h3 class="text-3xl font-bold mb-10 text-center">Event Highlights</h3>
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 shadow rounded">
+            <h4 class="text-xl font-bold mb-2">Workshops</h4>
+            <p>Hands-on learning with experts from the industry.</p>
+          </div>
+          <div class="bg-white p-6 shadow rounded">
+            <h4 class="text-xl font-bold mb-2">Competitions</h4>
+            <p>Showcase your skills and win exciting prizes.</p>
+          </div>
+          <div class="bg-white p-6 shadow rounded">
+            <h4 class="text-xl font-bold mb-2">Networking</h4>
+            <p>Connect with students, mentors, and industry leaders.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section id="schedule" class="container mx-auto py-16 px-4">
+      <h3 class="text-3xl font-bold mb-10 text-center">Event Schedule</h3>
+      <div class="space-y-6 max-w-2xl mx-auto">
+        <div class="p-4 bg-white rounded shadow">
+          <h4 class="font-bold text-lg">10:00 AM - Opening Ceremony</h4>
+          <p>Welcome speech and event overview.</p>
+        </div>
+        <div class="p-4 bg-white rounded shadow">
+          <h4 class="font-bold text-lg">12:00 PM - Workshops</h4>
+          <p>Interactive sessions with experts.</p>
+        </div>
+        <div class="p-4 bg-white rounded shadow">
+          <h4 class="font-bold text-lg">3:00 PM - Competitions</h4>
+          <p>Engage in exciting tech challenges.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-blue-50 py-16">
+      <div class="container mx-auto px-4 text-center">
+        <h3 class="text-3xl font-bold mb-6">Contact Us</h3>
+        <p>Email: info@collegeevent.com</p>
+        <p>Phone: +123 456 7890</p>
+      </div>
+    </section>
+
+    <!-- Register Section -->
+    <section id="register" class="bg-gray-200 py-16">
+      <div class="max-w-xl mx-auto bg-white shadow-lg p-8 rounded-lg">
+        <h3 class="text-3xl font-bold text-center mb-6">Register Now</h3>
+
+        <form>
+          <label class="block mb-4">
+            <span class="font-medium">Full Name</span>
+            <input type="text" class="mt-1 w-full p-3 border rounded" required>
+          </label>
+
+          <label class="block mb-4">
+            <span class="font-medium">Email</span>
+            <input type="email" class="mt-1 w-full p-3 border rounded" required>
+          </label>
+
+          <label class="block mb-6">
+            <span class="font-medium">Phone</span>
+            <input type="text" class="mt-1 w-full p-3 border rounded" required>
+          </label>
+
+          <button class="w-full bg-blue-600 text-white py-3 rounded font-semibold">Submit</button>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white text-center py-4">
+    <p>© 2024 College Event. All Rights Reserved.</p>
+  </footer>
+
+</body>
+</html>
