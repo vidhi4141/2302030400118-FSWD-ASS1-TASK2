@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register - TechFest 2026</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    h1, h2, h3, h4, h5 { font-family: 'Space Grotesk', sans-serif; }
+  </style>
+</head>
+<body class="bg-black text-white min-h-screen flex items-center justify-center px-6">
+
+  <div class="w-full max-w-lg p-8 glass rounded-3xl bg-white/5 backdrop-blur-md border border-white/10">
+    <h2 class="text-4xl font-bold text-center mb-6 gradient-text">Event Registration</h2>
+
+    <form class="space-y-5">
+      <div>
+        <label class="block mb-1">Full Name</label>
+        <input type="text" class="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-electric outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1">Email</label>
+        <input type="email" class="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-electric outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1">College / University</label>
+        <input type="text" class="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-electric outline-none" />
+      </div>
+
+      <div>
+        <label class="block mb-1">Select Category</label>
+        <select class="w-full p-3 rounded-xl bg-white/10 border border-white/20 focus:border-electric outline-none">
+          <option>Workshops</option>
+          <option>Hackathon</option>
+          <option>Coding Battle</option>
+          <option>Expo Visitor</option>
+        </select>
+      </div>
+
+      <button class="w-full py-3 rounded-full bg-gradient-to-r from-electric via-deep-purple to-neon-pink font-semibold hover:opacity-90">Submit Registration</button>
+    </form>
+
+    <p class="text-center text-white/60 text-sm mt-6">
+      Back to <a href="index.html" class="text-electric">Home</a>
+    </p>
+  </div>
+
+</body>
+</html>
