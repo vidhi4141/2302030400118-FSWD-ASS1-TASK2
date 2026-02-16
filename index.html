@@ -1,71 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" id="top">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>College Event 2024</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TechFest 2026 - The Ultimate College Technology & Innovation Summit</title>
+    <meta name="description" content="Join 500+ students, innovators, and tech enthusiasts for three days of workshops, competitions, keynotes, and networking at TechFest 2026." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'electric': '#00F0FF',
+              'neon-pink': '#FF006E',
+              'deep-purple': '#8338EC',
+              'cyber-yellow': '#FFBE0B',
+            },
+            fontFamily: {
+              'display': ['Space Grotesk', 'sans-serif'],
+              'body': ['Inter', 'sans-serif'],
+            },
+            borderRadius: {
+              '4xl': '2rem',
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+      body { font-family: 'Inter', sans-serif; }
+      h1, h2, h3, h4, h5, h6 { font-family: 'Space Grotesk', sans-serif; }
+
+      #nav-toggle { display: none; }
+      #nav-toggle:checked ~ #nav-menu { max-height: 500px; opacity: 1; }
+      #nav-menu {
+        max-height: 0; opacity: 0; overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
+      }
+      @media (min-width: 768px) {
+        #nav-menu { max-height: none !important; opacity: 1 !important; overflow: visible !important; }
+      }
+
+      html { scroll-behavior: smooth; }
+
+      .gradient-text {
+        background: linear-gradient(135deg, #00F0FF 0%, #8338EC 50%, #FF006E 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+
+      .glass {
+        background: rgba(255,255,255,0.05);
+        backdrop-filter: blur(10px);
+        border: 1px solid rgba(255,255,255,0.1);
+      }
+    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-black text-white antialiased">
 
-  <!-- HERO SECTION -->
-  <section class="bg-blue-600 text-white py-24 text-center">
-    <h1 class="text-4xl font-bold mb-4">College Fest 2024</h1>
-    <p class="text-lg max-w-2xl mx-auto">Join us for an exciting event filled with workshops, competitions, cultural shows, and more.</p>
-    <a href="#schedule" class="mt-6 inline-block bg-white text-blue-600 px-6 py-3 font-semibold rounded">View Schedule</a>
-  </section>
+  <!-- Floating Navigation -->
+  <nav class="fixed top-0 left-0 right-0 z-50 px-4 py-4">
+    <div class="container mx-auto">
+      <div class="glass rounded-full px-6 py-3 flex items-center justify-between">
+        <a href="#top" class="text-xl font-bold font-display gradient-text">TechFest 2026</a>
 
-  <!-- ABOUT SECTION -->
-  <section class="py-16 px-6 text-center max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold mb-4">About the Event</h2>
-    <p class="text-gray-600">Our annual college fest is a celebration of creativity, innovation, and collaboration. Students from different departments participate in a variety of events designed to showcase talent and build connections.</p>
-  </section>
+        <label for="nav-toggle" class="md:hidden cursor-pointer">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </label>
+        <input type="checkbox" id="nav-toggle" />
 
-  <!-- HIGHLIGHTS -->
-  <section class="py-16 bg-gray-100">
-    <h2 class="text-3xl font-bold text-center mb-10">Event Highlights</h2>
-    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6">
-      <div class="p-6 bg-white rounded shadow text-center">
-        <h3 class="font-bold text-xl mb-2">Workshops</h3>
-        <p class="text-gray-600">Technical and creative workshops conducted by experts.</p>
+        <div id="nav-menu" class="absolute md:relative top-full left-0 right-0 mt-2 md:mt-0 glass md:glass-none rounded-3xl md:rounded-none p-4 md:p-0">
+          <div class="flex flex-col md:flex-row gap-2 md:gap-6 md:items-center">
+            <a href="#top" class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors">Home</a>
+            <a href="#highlights" class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors">Highlights</a>
+            <a href="#schedule" class="px-4 py-2 rounded-full hover:bg-white/10 transition-colors">Schedule</a>
+            <a href="#register" class="px-4 py-2 rounded-full bg-gradient-to-r from-electric via-deep-purple to-neon-pink text-white font-semibold hover:opacity-90 transition-opacity">Register</a>
+          </div>
+        </div>
       </div>
-      <div class="p-6 bg-white rounded shadow text-center">
-        <h3 class="font-bold text-xl mb-2">Competitions</h3>
-        <p class="text-gray-600">Exciting competitions with prizes and certificates.</p>
+    </div>
+  </nav>
+   <!-- Hero Section -->
+  <section class="relative min-h-screen flex items-center justify-center text-center px-6" id="hero">
+    <div class="absolute inset-0">
+      <img src="https://images.unsplash.com/photo-1535223289827-42f1e9919769?auto=format&fit=crop&w=2000&q=80" class="w-full h-full object-cover opacity-30" />
+    </div>
+
+    <div class="relative z-10 max-w-3xl">
+      <h1 class="text-5xl md:text-6xl font-bold font-display gradient-text mb-6">TechFest 2026</h1>
+      <p class="text-lg md:text-xl text-white/80 mb-8">Three days of innovation, competitions, workshops, and next‑gen technology.</p>
+
+      <a href="#register" class="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-electric via-deep-purple to-neon-pink text-white font-semibold hover:opacity-90 transition-opacity">Register Now</a>
+    </div>
+  </section>
+   <!-- Highlights Section -->
+  <section id="highlights" class="py-24 px-6 bg-black">
+    <div class="container mx-auto text-center mb-16">
+      <h2 class="text-4xl font-display font-bold gradient-text mb-4">Event Highlights</h2>
+      <p class="text-white/70 max-w-2xl mx-auto">Explore workshops, competitions, panels, and tech experiences curated for future innovators.</p>
+    </div>
+
+    <div class="container mx-auto grid md:grid-cols-3 gap-10">
+      <div class="glass p-8 rounded-4xl text-center">
+        <h3 class="text-2xl font-semibold mb-4">Workshops</h3>
+        <p class="text-white/70">Hands-on sessions hosted by industry leaders covering AI, robotics, cybersecurity, and more.</p>
       </div>
-      <div class="p-6 bg-white rounded shadow text-center">
-        <h3 class="font-bold text-xl mb-2">Cultural Night</h3>
-        <p class="text-gray-600">Music, dance, and performances by talented students.</p>
+
+      <div class="glass p-8 rounded-4xl text-center">
+        <h3 class="text-2xl font-semibold mb-4">Tech Competitions</h3>
+        <p class="text-white/70">Hackathons, coding battles, hardware challenges, and innovation contests with exciting prizes.</p>
+      </div>
+
+      <div class="glass p-8 rounded-4xl text-center">
+        <h3 class="text-2xl font-semibold mb-4">Guest Speakers</h3>
+        <p class="text-white/70">Learn from founders, engineers, researchers, and creators pushing the boundaries of technology.</p>
       </div>
     </div>
   </section>
 
-  <!-- SCHEDULE -->
-  <section id="schedule" class="py-16 px-6 max-w-4xl mx-auto">
-    <h2 class="text-3xl font-bold text-center mb-8">Event Schedule</h2>
-    <div class="bg-white shadow rounded p-6 space-y-4">
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="font-semibold text-xl">10:00 AM – Opening Ceremony</h3>
-        <p class="text-gray-600">Welcome speech and introduction.</p>
+  <!-- Schedule Section -->
+  <section id="schedule" class="py-24 px-6 bg-gradient-to-b from-black to-deep-purple/20">
+    <div class="container mx-auto text-center mb-16">
+      <h2 class="text-4xl font-display font-bold gradient-text mb-4">Event Schedule</h2>
+      <p class="text-white/70 max-w-2xl mx-auto">Three packed days of sessions, competitions, and networking.</p>
+    </div>
+
+    <div class="container mx-auto space-y-10">
+
+      <div class="glass p-6 rounded-3xl">
+        <h3 class="text-2xl font-semibold mb-2">Day 1 - Innovation Summit</h3>
+        <p class="text-white/70 mb-4">Keynotes, showcases, and experience zones.</p>
+        <ul class="space-y-2 text-white/80">
+          <li>10:00 AM - Opening Ceremony</li>
+          <li>11:00 AM - Keynote: The Future of AI</li>
+          <li>1:00 PM - Robotics Expo Walkthrough</li>
+          <li>3:00 PM - Cybersecurity Panel</li>
+        </ul>
       </div>
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="font-semibold text-xl">12:00 PM – Workshops</h3>
-        <p class="text-gray-600">Technical & creative learning sessions.</p>
+
+      <div class="glass p-6 rounded-3xl">
+        <h3 class="text-2xl font-semibold mb-2">Day 2 - Build & Compete</h3>
+        <p class="text-white/70 mb-4">24-hour hackathon and tech challenges.</p>
+        <ul class="space-y-2 text-white/80">
+          <li>9:00 AM - Hackathon Kickoff</li>
+          <li>12:00 PM - Hardware Showdown</li>
+          <li>4:00 PM - Coding Battle Qualifiers</li>
+        </ul>
       </div>
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="font-semibold text-xl">3:00 PM – Competitions</h3>
-        <p class="text-gray-600">Team & solo competitions.</p>
+
+      <div class="glass p-6 rounded-3xl">
+        <h3 class="text-2xl font-semibold mb-2">Day 3 - Finale</h3>
+        <p class="text-white/70 mb-4">Presentations, awards, and closing ceremony.</p>
+        <ul class="space-y-2 text-white/80">
+          <li>10:00 AM - Hackathon Submissions</li>
+          <li>12:00 PM - Top 10 Presentations</li>
+          <li>3:00 PM - Awards & Closing</li>
+        </ul>
       </div>
-      <div class="border-l-4 border-blue-600 pl-4">
-        <h3 class="font-semibold text-xl">7:00 PM – Cultural Night</h3>
-        <p class="text-gray-600">Music, dance, and fun events.</p>
-      </div>
+
+    </div>
+  </section>
+   <!-- Register Section -->
+  <section id="register" class="py-24 px-6 bg-black">
+    <div class="container mx-auto text-center max-w-2xl">
+      <h2 class="text-4xl font-display font-bold gradient-text mb-4">Register Now</h2>
+      <p class="text-white/70 mb-8">Secure your spot for TechFest 2026. Limited seats available for workshops and competitions.</p>
+
+      <a href="#" class="inline-block px-10 py-4 rounded-full bg-gradient-to-r from-electric via-deep-purple to-neon-pink text-white font-semibold hover:opacity-90 transition-opacity">Registration Opens Soon</a>
     </div>
   </section>
 
-  <!-- FOOTER -->
-  <footer class="bg-blue-600 text-white text-center py-6 mt-10">
-    <p>© 2024 College Fest. All Rights Reserved.</p>
+  <!-- Footer -->
+  <footer class="py-10 bg-black/40 text-center text-white/60 text-sm">
+    <p>© 2026 TechFest. All rights reserved.</p>
   </footer>
 
 </body>
